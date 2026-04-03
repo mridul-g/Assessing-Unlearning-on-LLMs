@@ -1,0 +1,10 @@
+{
+    "exact_memorization": 0.9411272633346645,
+    "extraction_strength": 0.7071478623134465,
+    "forget_Q_A_Prob": 0.880556640625,
+    "forget_Q_A_ROUGE": 0.8192141114761908,
+    "forget_truth_ratio": 0.4752456374216718,
+    "mia_gradnorm": 1.6781688928604126,
+    "model_utility": 0.6004084697647156,
+    "privleak": 31.94318413095572
+}

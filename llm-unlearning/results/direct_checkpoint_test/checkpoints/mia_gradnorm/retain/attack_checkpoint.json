@@ -1,0 +1,26 @@
+{
+    "done": true,
+    "next_batch_idx": 3,
+    "all_scores": [
+        1.0,
+        3.375,
+        0.83984375
+    ],
+    "all_indices": [
+        0,
+        1,
+        2
+    ],
+    "agg_value": 1.73828125,
+    "value_by_index": {
+        "0": {
+            "score": 1.0
+        },
+        "1": {
+            "score": 3.375
+        },
+        "2": {
+            "score": 0.83984375
+        }
+    }
+}
