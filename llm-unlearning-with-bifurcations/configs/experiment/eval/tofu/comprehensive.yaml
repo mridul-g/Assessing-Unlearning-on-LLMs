@@ -1,0 +1,65 @@
+# @package _global_
+# Comprehensive evaluation settings for TOFU benchmark.
+# Loads the full TOFU metric suite for bucket runs.
+
+defaults:
+  - /eval/tofu_metrics@eval.tofu.metrics.forget_Truth_Ratio: forget_Truth_Ratio
+  - /eval/tofu_metrics@eval.tofu.metrics.forget_quality: forget_quality
+  - /eval/tofu_metrics@eval.tofu.metrics.forget_Q_A_Prob: forget_Q_A_Prob
+  - /eval/tofu_metrics@eval.tofu.metrics.forget_Q_A_ROUGE: forget_Q_A_ROUGE
+  - /eval/tofu_metrics@eval.tofu.metrics.forget_Q_A_PARA_ROUGE: forget_Q_A_PARA_ROUGE
+  - /eval/tofu_metrics@eval.tofu.metrics.retain_Truth_Ratio: retain_Truth_Ratio
+  - /eval/tofu_metrics@eval.tofu.metrics.retain_Q_A_Prob: retain_Q_A_Prob
+  - /eval/tofu_metrics@eval.tofu.metrics.retain_Q_A_ROUGE: retain_Q_A_ROUGE
+  - /eval/tofu_metrics@eval.tofu.metrics.retain_Q_A_PARA_Prob: retain_Q_A_PARA_Prob
+  - /eval/tofu_metrics@eval.tofu.metrics.ra_Truth_Ratio: ra_Truth_Ratio
+  - /eval/tofu_metrics@eval.tofu.metrics.ra_Q_A_Prob: ra_Q_A_Prob
+  - /eval/tofu_metrics@eval.tofu.metrics.ra_Q_A_ROUGE: ra_Q_A_ROUGE
+  - /eval/tofu_metrics@eval.tofu.metrics.wf_Truth_Ratio: wf_Truth_Ratio
+  - /eval/tofu_metrics@eval.tofu.metrics.wf_Q_A_Prob: wf_Q_A_Prob
+  - /eval/tofu_metrics@eval.tofu.metrics.wf_Q_A_ROUGE: wf_Q_A_ROUGE
+  - /eval/tofu_metrics@eval.tofu.metrics.model_utility: model_utility
+  - /eval/tofu_metrics@eval.tofu.metrics.extraction_strength: extraction_strength
+  - /eval/tofu_metrics@eval.tofu.metrics.exact_memorization: exact_memorization
+  - /eval/tofu_metrics@eval.tofu.metrics.mia_loss: mia_loss
+  - /eval/tofu_metrics@eval.tofu.metrics.mia_zlib: mia_zlib
+  - /eval/tofu_metrics@eval.tofu.metrics.mia_gradnorm: mia_gradnorm
+  - /eval/tofu_metrics@eval.tofu.metrics.mia_min_k: mia_min_k
+  - /eval/tofu_metrics@eval.tofu.metrics.mia_min_k_plus_plus: mia_min_k_plus_plus
+  - /eval/tofu_metrics@eval.tofu.metrics.mia_reference: mia_reference
+  - /eval/tofu_metrics@eval.tofu.metrics.privleak: privleak
+
+eval:
+  tofu:
+    metrics:
+      forget_Truth_Ratio:
+        aggregator: closer_to_1_better
+      forget_quality: {}
+      forget_Q_A_Prob: {}
+      forget_Q_A_ROUGE: {}
+      forget_Q_A_PARA_ROUGE: {}
+      retain_Truth_Ratio:
+        aggregator: true_better
+      retain_Q_A_Prob: {}
+      retain_Q_A_ROUGE: {}
+      retain_Q_A_PARA_Prob: {}
+      ra_Truth_Ratio:
+        aggregator: true_better
+      ra_Q_A_Prob: {}
+      ra_Q_A_ROUGE: {}
+      wf_Truth_Ratio:
+        aggregator: true_better
+      wf_Q_A_Prob: {}
+      wf_Q_A_ROUGE: {}
+      model_utility: {}
+      extraction_strength: {}
+      exact_memorization:
+        batch_size: 1
+      mia_loss: {}
+      mia_zlib: {}
+      mia_gradnorm:
+        p: 2
+      mia_min_k: {}
+      mia_min_k_plus_plus: {}
+      mia_reference: {}
+      privleak: {}

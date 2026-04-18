@@ -1,0 +1,15 @@
+# @package _global_
+# Comprehensive evaluation settings for MUSE benchmark.
+# Adds extra metrics (exact_memorization, mia_gradnorm) with tuned parameters.
+
+defaults:
+  - /eval/muse_metrics@eval.muse.metrics.exact_memorization: exact_memorization
+  - /eval/muse_metrics@eval.muse.metrics.mia_gradnorm: mia_gradnorm
+
+eval:
+  muse:
+    metrics:
+      exact_memorization:
+        batch_size: 1
+      mia_gradnorm:
+        p: 2

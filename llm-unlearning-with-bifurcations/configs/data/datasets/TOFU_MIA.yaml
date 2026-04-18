@@ -1,0 +1,24 @@
+TOFU_QA_forget:
+  access_key: forget
+  handler: QADataset
+  args:
+    hf_args:
+      name: ${eval.tofu.forget_split}
+      split: "train"
+      path: "locuslab/TOFU"
+    question_key: "question"
+    answer_key: "answer"
+    max_length: 512
+TOFU_QA_holdout:
+  access_key: holdout
+  handler: QADataset
+  args:
+    hf_args:
+      # Keep access_key as holdout for backward compatibility in metric handlers,
+      # but use retain90 so MIA compares 400 forget vs 3600 retain samples.
+      name: ${eval.tofu.retain_split}
+      path: "locuslab/TOFU"
+      split: "train"
+    question_key: "question"
+    answer_key: "answer"
+    max_length: 512
